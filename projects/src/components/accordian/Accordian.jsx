@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import data from "./data";
 import  "./styles.css";
 
-const Index = () => {
+const Accordian = () => {
   const [selected, setSelected] = useState(null);
   const [enableMultiSelection, setEnableMultiSelection] = useState(false);
   const [multiple, setMultiple] = useState([]);
@@ -19,7 +19,7 @@ const Index = () => {
 
   return (
     <div className="wrapper">
-      <button onClick={() => setEnableMultiSelection(!enableMultiSelection)}>
+      <button className="toggle-button" onClick={() => setEnableMultiSelection(!enableMultiSelection)}>
         Toggle Multi Selection
       </button>
       <div className="accordion">
@@ -54,4 +54,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Accordian;
