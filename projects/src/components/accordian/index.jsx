@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import data from "./data";
+import  "./styles.css";
 
 const Index = () => {
   const [selected, setSelected] = useState(null);
