@@ -20,7 +20,7 @@ const Accordian = () => {
   return (
     <div className="wrapper">
       <button className="toggle-button" onClick={() => setEnableMultiSelection(!enableMultiSelection)}>
-        Toggle Multi Selection
+        Multi Selection
       </button>
       <div className="accordion">
         {data && data.length > 0 ? (
