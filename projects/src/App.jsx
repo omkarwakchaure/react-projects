@@ -5,6 +5,7 @@ import RandomColor from "./components/random-color/RandomColor";
 import StarRating from "./components/star-rating/StarRating";
 import TreeView from "./components/tree-view/TreeView";
 import menus from "./components/tree-view/data";
+import QrCode from "./components/qr-code-generator/qrCode.jsx";
 function App() {
   return (
     <>
@@ -24,7 +25,10 @@ function App() {
       {/* <LoadMoreData /> */}
 
       {/* Tree-view component */}
-      <TreeView menus={menus} />
+      {/* <TreeView menus={menus} /> */}
+
+      {/* Qrcode components */}
+      <QrCode />
     </>
   );
 }
