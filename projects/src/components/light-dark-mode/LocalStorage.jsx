@@ -11,6 +11,7 @@ const LocalStorage = (key, defaultValue) => {
       console.log(e);
       currentValue = defaultValue;
     }
+    console.log(currentValue);
     return currentValue;
   });
 

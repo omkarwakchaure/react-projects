@@ -4,6 +4,7 @@ import "./Styles.css";
 const LightDarkMode = () => {
   const [theme, setTheme] = LocalStorage("theme", "dark");
 
+  console.log("theme", theme);
   const handleToggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };

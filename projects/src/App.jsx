@@ -7,6 +7,7 @@ import TreeView from "./components/tree-view/TreeView";
 import menus from "./components/tree-view/data";
 import QrCode from "./components/qr-code-generator/qrCode.jsx";
 import LightDarkMode from "./components/light-dark-mode/LightDarkMode.jsx";
+import ScrollBar from "./components/scroll-indicator/ScrollBar.jsx";
 function App() {
   return (
     <>
@@ -32,7 +33,10 @@ function App() {
       {/* <QrCode /> */}
 
       {/* theme components */}
-      <LightDarkMode />
+      {/* <LightDarkMode /> */}
+
+      {/* Scrollbar components */}
+      <ScrollBar url={`https://dummyjson.com/products?limit=100`} />
     </>
   );
 }
