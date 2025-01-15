@@ -8,6 +8,8 @@ import menus from "./components/tree-view/data";
 import QrCode from "./components/qr-code-generator/qrCode.jsx";
 import LightDarkMode from "./components/light-dark-mode/LightDarkMode.jsx";
 import ScrollBar from "./components/scroll-indicator/ScrollBar.jsx";
+import TabTest from "./components/custom-tabs/TabTest.jsx";
+import ModalTest from "./components/custom-modal-popup/ModalTest.jsx";
 function App() {
   return (
     <>
@@ -36,7 +38,13 @@ function App() {
       {/* <LightDarkMode /> */}
 
       {/* Scrollbar components */}
-      <ScrollBar url={`https://dummyjson.com/products?limit=100`} />
+      {/* <ScrollBar url={`https://dummyjson.com/products?limit=100`} /> */}
+
+      {/* Custom Tabs Components */}
+      {/* <TabTest/> */}
+
+      {/* Custom Modal Popup Components */}
+      <ModalTest />
     </>
   );
 }
