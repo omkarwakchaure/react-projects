@@ -7,10 +7,15 @@ const ModalTest = () => {
   const toggleModalStatus = () => {
     setShowModalStatus(!showModalStatus);
   };
+
+  const onClose = () => {
+    setShowModalStatus(false);
+  };
+
   return (
     <>
       <button onClick={toggleModalStatus}>Open Modal Popup</button>
-      {showModalStatus && <Modal body={<p>Body Data</p>} />}
+      {showModalStatus && <Modal onClose={onClose} body={<p>Body Data</p>} />}
     </>
   );
 };
