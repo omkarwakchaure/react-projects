@@ -24,6 +24,9 @@ const SearchAuto = () => {
       setShowDropdown(false);
     }
   }
+  function handleClick(e) {
+    console.log(e.target.innerText);
+  }
   async function fetchUsers() {
     try {
       setloading(true);
@@ -31,8 +34,8 @@ const SearchAuto = () => {
       const data = await response.json();
       console.log(data);
 
-      if (data) {
-        setUsers(data.map((userItem) => userItem.firstName));
+      if (data && data.users && data.users.length) {
+        setUsers(data.users.map((userItem) => userItem.firstName));
         setloading(false);
         setError(null);
       }
@@ -56,7 +59,9 @@ const SearchAuto = () => {
         value={searchParam}
         onChange={handleChange}
       />
-      {showDropdown && <Suggestion data={filteredUsers} />}
+      {showDropdown && (
+        <Suggestion handleClick={handleClick} data={filteredUsers} />
+      )}
     </div>
   );
 };
