@@ -26,6 +26,9 @@ const SearchAuto = () => {
   }
   function handleClick(e) {
     console.log(e.target.innerText);
+    setShowDropdown(false);
+    setSearchParam(e.target.innerText);
+    setFilteredUsers([]);
   }
   async function fetchUsers() {
     try {
